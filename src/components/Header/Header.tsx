@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { motion, useAnimation, useCycle } from "framer-motion";
+import { motion } from "framer-motion";
 import TN from "../../images/Thumbnail PNG.png";
 import { AnimatedTitle } from "../AnimatedTitle/AnimatedTitle";
 import { Hamburger } from "../Hamburger/Hamburger";

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //components
-import { Sliders } from "./components/Sliders/Sliders";
 import { Header } from "./components/Header/Header";
 import { About } from "./components/About/About";
 import { Projects } from "./components/Projects/Projects";
@@ -26,7 +25,6 @@ function App() {
   return (
     <div className="App">
       {loading && <LoadingScreen />}
-      {/* <Sliders /> */}
       <Router>
         <Header init={initial} />
         <Switch>
