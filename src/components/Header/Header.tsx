@@ -169,8 +169,6 @@ export const Header = ({ init }: Props) => {
     }
   }, [bigScreen]);
 
-  console.log(mobileScreen);
-
   return (
     <div>
       <Nav>
@@ -207,7 +205,7 @@ export const Header = ({ init }: Props) => {
           animate={
             !bigScreen && !mobileScreen
               ? "big"
-              : bigScreen && !drawerOpen
+              : (bigScreen || mobileScreen) && !drawerOpen
               ? "closed"
               : "open"
           }
