@@ -30,7 +30,7 @@ const BurgerWrap = styled("div")`
 
 export const Hamburger = ({ click }) => {
   return (
-    <BurgerWrap onTouchStart={click} onClick={click}>
+    <BurgerWrap onClick={click}>
       <div className="line1"></div>
       <div className="line2"></div>
       <div className="line3"></div>

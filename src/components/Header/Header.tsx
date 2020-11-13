@@ -155,6 +155,7 @@ interface Props {
 export const Header = ({ init }: Props) => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const bigScreen = useMediaQuery({ query: "(max-width: 1000px" });
+  const mobileScreen = useMediaQuery({ query: "(max-device-width: 1224px)" });
   const height: number = window.innerHeight / 2 - 80;
   //prettier-ignore
   const width: number = (window.innerWidth / 2) - 90 - (0.1 * window.innerWidth);
@@ -167,6 +168,8 @@ export const Header = ({ init }: Props) => {
       closeDrawer();
     }
   }, [bigScreen]);
+
+  console.log(mobileScreen);
 
   return (
     <div>
@@ -201,7 +204,13 @@ export const Header = ({ init }: Props) => {
         />
         <LinkList
           variants={drawerVariants}
-          animate={!bigScreen ? "big" : !drawerOpen ? "closed" : "open"}
+          animate={
+            !bigScreen && !mobileScreen
+              ? "big"
+              : bigScreen && !drawerOpen
+              ? "closed"
+              : "open"
+          }
         >
           <li>
             <Link onClick={() => closeDrawer()} to="/about">
