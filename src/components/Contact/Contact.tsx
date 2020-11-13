@@ -95,7 +95,11 @@ const InputWrap = styled("div")`
 `;
 
 export const Contact = () => {
-  const [data, setData] = React.useState({
+  const [data, setData] = React.useState<{
+    email: string | null;
+    name: string | null;
+    message: string | null;
+  }>({
     email: null,
     name: null,
     message: null,
