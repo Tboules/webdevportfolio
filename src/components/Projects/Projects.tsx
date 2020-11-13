@@ -35,7 +35,7 @@ const ProjectWrap = styled("div")`
   padding-bottom: 80px;
 `;
 
-export const Projects: React.FC = () => {
+export const Projects = () => {
   return (
     <div>
       <Banner>

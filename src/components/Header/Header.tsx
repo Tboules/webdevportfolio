@@ -59,59 +59,6 @@ const LogoWrap = styled("div")`
   }
 `;
 
-const ListTwo = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  width: 25%;
-  margin-right: 3%;
-
-  @media only screen and (max-width: 1200px) {
-    width: 35%;
-  }
-
-  @media only screen and (max-width: 1000px) {
-    height: 100%;
-    width: 50%;
-    background-color: #f2f2f2;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    margin-right: 0px;
-    margin-top: 0px;
-    overflow: hidden;
-  }
-
-  a {
-    text-decoration: none;
-    color: ghostwhite;
-    font-size: 1.25rem;
-    position: relative;
-  }
-  a:after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: -10%;
-    z-index: 0;
-    height: 3px;
-    width: 120%;
-    background-color: ghostwhite;
-    transform: scale(0);
-    transition: transform 0.3s ease, background-color 0.7s ease-out;
-  }
-
-  a:hover {
-    color: #5299d3;
-    &:after {
-      background-color: #5299d3;
-      transform: scale(1);
-    }
-  }
-`;
-
 const LinkList = styled(motion.ul)`
   display: flex;
   justify-content: space-between;
@@ -201,7 +148,11 @@ const drawerVariants = {
   },
 };
 
-export const Header: React.FC = ({ init }) => {
+interface Props {
+  init: boolean;
+}
+
+export const Header = ({ init }: Props) => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const bigScreen = useMediaQuery({ query: "(max-width: 1000px" });
   const height: number = window.innerHeight / 2 - 80;

@@ -27,10 +27,7 @@ const Letters = styled(motion.h1)`
   margin-bottom: 0px;
 `;
 
-export const AnimatedTitle: React.FC = ({
-  title,
-  mediaQ,
-}: AnimatedTitleProps) => {
+export const AnimatedTitle = ({ title, mediaQ }: AnimatedTitleProps) => {
   return (
     <TitleWrap flexDirection={mediaQ}>
       {title.split(" ").map((word) => {

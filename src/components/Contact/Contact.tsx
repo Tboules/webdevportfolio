@@ -94,7 +94,7 @@ const InputWrap = styled("div")`
   }
 `;
 
-export const Contact: React.FC = () => {
+export const Contact = () => {
   const [data, setData] = React.useState({
     email: null,
     name: null,
@@ -113,7 +113,7 @@ export const Contact: React.FC = () => {
         <h1>Let's Work Togther</h1>
       </Banner>
       <FormWrap onSubmit={handleSubmit}>
-        <AnimatedTitle title="Contact Me" />
+        <AnimatedTitle mediaQ="row" title="Contact Me" />
         <InputWrap>
           <label htmlFor="Email">Email:</label>
           <input

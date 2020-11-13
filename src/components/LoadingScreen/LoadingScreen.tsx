@@ -15,7 +15,7 @@ const Load = styled(motion.div)`
   overflow: hidden;
 `;
 
-export const LoadingScreen: React.FC = () => {
+export const LoadingScreen = () => {
   return (
     <Load
       animate={{

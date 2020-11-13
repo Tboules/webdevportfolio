@@ -59,7 +59,6 @@ export const About: React.FC = () => {
           opportunity to pursue something else that I have also always been
           passionate about: coding.
         </Paragraph>
-        {/* <IllustrationDots illustration={teachIll} /> */}
         <Paragraph>
           Putting in countless hours, I have honed my skills in web development
           technologies across the board, especially React.JS, Gatsby, GraphQL,
@@ -68,14 +67,12 @@ export const About: React.FC = () => {
           a short time also worked with two successful companies to build
           scalable, easy-to-use, and fast sites.
         </Paragraph>
-        {/* <IllustrationDots illustration={conference} /> */}
         <Paragraph>
           Drawing from 10+ years of communication and customer service
           experience, I was able to effectively understand exactly what my
           clients needed to enhance their businesses and to deliver that product
           into happy hands.
         </Paragraph>
-        {/* <IllustrationDots illustration={working} /> */}
         <Paragraph>
           My ultimate goal is to blend my two passions for teaching and coding
           into one career. Teaching web development would be such an amazing

@@ -37,7 +37,7 @@ const Dot = styled(motion.span)`
   display: block;
 `;
 
-export const IllustrationDots: React.FC = ({
+export const IllustrationDots = ({
   pos,
   illustration,
 }: IllustrationDotsProps) => {

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
 const BurgerWrap = styled("div")`
   display: flex;
@@ -29,7 +28,7 @@ const BurgerWrap = styled("div")`
   }
 `;
 
-export const Hamburger: React.FC = ({ click }) => {
+export const Hamburger = ({ click }) => {
   return (
     <BurgerWrap onClick={click}>
       <div className="line1"></div>

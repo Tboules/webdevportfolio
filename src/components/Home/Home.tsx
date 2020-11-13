@@ -38,7 +38,7 @@ export const Section = styled("div")`
   }
 `;
 
-export const Home: React.FC = () => {
+export const Home = () => {
   return (
     <motion.div>
       <Banner>
@@ -64,7 +64,7 @@ export const Home: React.FC = () => {
             </p>
           </TextBox>
           <PageButton path="/about">
-            <AnimatedTitle title="< More About Me" />
+            <AnimatedTitle mediaQ="row" title="< More About Me" />
           </PageButton>
         </Section>
         <Section>
@@ -83,7 +83,7 @@ export const Home: React.FC = () => {
             ]}
           />
           <PageButton path="/projects">
-            <AnimatedTitle title="See More Projects >" />
+            <AnimatedTitle mediaQ="row" title="See More Projects >" />
           </PageButton>
         </Section>
       </HomeLayout>
