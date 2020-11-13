@@ -16,7 +16,11 @@ const SliderWrap = styled(motion.div)`
   z-index: 100;
 `;
 
-const Slider = styled(motion.img)`
+const Slider = styled(motion.img)<{
+  width?: string;
+  top?: string;
+  left?: string;
+}>`
   width: ${(props) => props.width};
   position: absolute;
   top: ${(props) => props.top};
@@ -54,7 +58,7 @@ const rightVariants = {
 };
 
 export const Sliders: React.FC = () => {
-  const [slideWidth, setSlideWidth] = useState<number>("50%");
+  const [slideWidth, setSlideWidth] = useState("50%");
 
   const oneSlide = useMediaQuery({
     query: "(max-width: 780px)",
