@@ -1,24 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+//router
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//components
+import { Sliders } from "./components/Sliders/Sliders";
+import { Header } from "./components/Header/Header";
+import { About } from "./components/About/About";
+import { Projects } from "./components/Projects/Projects";
+import { Contact } from "./components/Contact/Contact";
+import { Home } from "./components/Home/Home";
+import { LoadingScreen } from "./components/LoadingScreen/LoadingScreen";
 
 function App() {
+  const [loading, setLoading] = useState<boolean>(true);
+  const [initial, setInitial] = useState<boolean>(true);
+
+  setTimeout(() => {
+    setInitial(false);
+  }, 5000);
+
+  setTimeout(() => {
+    setLoading(false);
+  }, 1400);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {loading && <LoadingScreen />}
+      {/* <Sliders /> */}
+      <Router>
+        <Header init={initial} />
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
