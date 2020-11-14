@@ -107,7 +107,18 @@ export const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //cloud function
+    fetch("/.netlify/functions/email", {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("success", data);
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+
     e.target.reset();
   };
 

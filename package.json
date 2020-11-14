@@ -12,7 +12,11 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-router": "^5.1.8",
     "@types/styled-components": "^5.1.4",
+    "dotenv": "^8.2.0",
+    "env-cmd": "^10.1.0",
     "framer-motion": "^2.9.4",
+    "mailgun-js": "^0.22.0",
+    "netlify-lambda": "^2.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-responsive": "^8.1.0",
@@ -23,8 +27,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd -f .env react-scripts start",
+    "build": "env-cmd -f .env react-scripts build",
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
