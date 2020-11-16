@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import conference from "../../images/Illustrations/Working People/conference.svg";
 import { Banner } from "../Banner/Banner";
 import { AnimatedTitle } from "../AnimatedTitle/AnimatedTitle";
+import { Dot } from "../About/About";
 
 const FormWrap = styled("form")`
   background-color: rgba(186, 232, 232, 1);
@@ -125,7 +126,14 @@ export const Contact = () => {
   return (
     <div>
       <Banner>
-        <h1>Let's Work Togther</h1>
+        <div style={{ width: "70%" }}>
+          <h1>Let's Work Togther</h1>
+          <h4>
+            (951-314-9626) <Dot /> abouleswebdev@gmail.com
+            <Dot />
+            <a href="https://github.com/Tboules">GitHub</a>
+          </h4>
+        </div>
       </Banner>
       <FormWrap onSubmit={handleSubmit}>
         <AnimatedTitle mediaQ="row" title="Contact Me" />

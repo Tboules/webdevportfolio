@@ -83,7 +83,7 @@ export const Projects = () => {
               { link: netlifyLogo, toolTip: "Netlify" },
               { link: SassLogo, toolTip: "Sass" },
             ]}
-            description="Grace is a non-profit helping new immigrants to Southern California. I organized and uploaded all of their content into the Contentful CMS and built out their site using Gatsby, React, GraphQL, and SASS. The site is not only easily customizable through Contentful, but also responsive, working well in the browser and on the phone."
+            description="Grace is a non-profit organization helping new immigrants to Southern California. I organized and uploaded all of their content into the Contentful CMS and built out their site using Gatsby, React, GraphQL, and SASS. The site is not only easily customizable through Contentful, but also responsive, working well in the browser and on the phone."
           />
         </Section>
         <Section>
@@ -132,7 +132,7 @@ export const Projects = () => {
               { link: netlifyLogo, toolTip: "Netlify" },
               { link: css, toolTip: "CSS3" },
             ]}
-            description="As my wife and I are both free lancers, we often find ourselves needing to track our hours for clients. Hour Track was a labor of love that uses firebase to store users and todo information in a database. Each user can store their todos and specifiy the amount of time each task took to complete."
+            description="As my wife and I are both freelancers, we often find ourselves needing to track our hours for clients. Hour Track was a labor of love that uses firebase to store users and todo information in a database. Each user can store their todos and specifiy the amount of time each task took to complete."
           />
         </Section>
         <Section>

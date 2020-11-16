@@ -50,13 +50,13 @@ export const Home = () => {
       <HomeLayout>
         <Section>
           <TextBox>
-            <h1>Hi, I'm Anthony!</h1>
+            <h1 style={{ textAlign: "left" }}>Hi, I'm Anthony!</h1>
             <p>
-              My name is Anthony Boules and I am a full stack developer with my
-              Master's in Education living in Orange, California. In the 21st
-              centery, your site is likely going to be your first impression
-              with customers and interested parties. It really matters, which is
-              why I care deeply about making your site amazing.
+              I am a full stack developer with my Master's in Education living
+              in Orange, California. In the 21st centery, your site is likely
+              going to be your first impression with customers and interested
+              parties. It really matters, which is why I care deeply about
+              making your site amazing.
             </p>
             <p>
               Prior to learning web development, I worked as an English Language

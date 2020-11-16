@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import TN from "../../images/Thumbnail PNG.png";
+import TN from "../../images/Thumbnail2.png";
 import { AnimatedTitle } from "../AnimatedTitle/AnimatedTitle";
 import { Hamburger } from "../Hamburger/Hamburger";
 import { useMediaQuery } from "react-responsive";
@@ -174,7 +174,7 @@ export const Header = ({ init }: Props) => {
       <Nav>
         <LogoWrap>
           <Link to="/">
-            {init ? (
+            {init && !mobileScreen ? (
               <motion.img
                 animate={{
                   y: [height, height + 250, 0],

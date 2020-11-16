@@ -24,7 +24,7 @@ const Paragraph = styled("p")`
   }
 `;
 
-const Dot = styled("span")`
+export const Dot = styled("span")`
   height: 10px;
   width: 10px;
   border-radius: 50%;
