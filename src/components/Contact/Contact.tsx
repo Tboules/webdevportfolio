@@ -112,14 +112,16 @@ export const Contact = () => {
       method: "POST",
       body: JSON.stringify(data),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("success", data);
-      })
+      // .then((res) => res.json())
+      .then((res) => res.text())
+      .then((text) => console.log(text))
+      // .then((data) => {
+      //   console.log("success", data);
+      // })
       .catch((error) => {
-        console.error("error", error);
+        console.log("error", error);
       });
-
+    alert("Thank you for reaching out!");
     e.target.reset();
   };
 
