@@ -131,7 +131,7 @@ export const Contact = () => {
         <div style={{ width: "70%" }}>
           <h1>Let's Work Togther</h1>
           <h4>
-            (951-314-9626) <Dot /> abouleswebdev@gmail.com
+            (951)314-9626 <Dot /> abouleswebdev@gmail.com
             <Dot />
             <a href="https://github.com/Tboules">GitHub</a>
           </h4>
