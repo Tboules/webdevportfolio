@@ -108,16 +108,20 @@ export const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // fetch("http://localhost:9000/email", {
     fetch("/.netlify/functions/email", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     })
-      // .then((res) => res.json())
-      .then((res) => res.text())
-      .then((text) => console.log(text))
-      // .then((data) => {
-      //   console.log("success", data);
-      // })
+      .then((res) => res.json())
+      // .then((res) => res.text())
+      // .then((text) => console.log(text))
+      .then((data) => {
+        console.log("success", data);
+      })
       .catch((error) => {
         console.log("error", error);
       });
@@ -145,6 +149,7 @@ export const Contact = () => {
             onChange={(e) => setData({ ...data, email: e.target.value })}
             type="text"
             name="Email"
+            required
           />
         </InputWrap>
         <InputWrap>
@@ -153,6 +158,7 @@ export const Contact = () => {
             onChange={(e) => setData({ ...data, name: e.target.value })}
             type="text"
             name="Name"
+            required
           />
         </InputWrap>
         <InputWrap>
@@ -161,6 +167,7 @@ export const Contact = () => {
             style={{ resize: "vertical", paddingLeft: "15px" }}
             onChange={(e) => setData({ ...data, message: e.target.value })}
             name="Message"
+            required
           />
         </InputWrap>
         <br />

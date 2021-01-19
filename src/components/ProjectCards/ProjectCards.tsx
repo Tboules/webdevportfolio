@@ -7,7 +7,7 @@ const ProjectCardsWrapper = styled("div")<{
   marginRight?: string;
   marginBottom?: string;
 }>`
-  min-height: 400px;
+  min-height: 450px;
   width: 90%;
   border-radius: 8px;
   background-color: #fafafa;
@@ -19,7 +19,7 @@ const ProjectCardsWrapper = styled("div")<{
   position: relative;
 
   @media only screen and (min-width: 1400px) {
-    min-height: 400px;
+    min-height: 450px;
     width: 80%;
     margin-right: ${(props) => props.marginRight};
     margin-left: ${(props) => props.marginLeft};
@@ -60,7 +60,7 @@ const LogoWrap = styled("div")<{ disp: string }>`
     padding: 10px;
 
     @media screen and (min-width: 800px) {
-      width: 45px;
+      width: 40px;
     }
   }
 `;
@@ -74,6 +74,18 @@ const PicDesLayout = styled("div")`
     @media screen and (min-width: 800px) {
       font-size: 1rem;
     }
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+    color: #272643;
+    font-weight: 600;
+    margin-bottom: 14px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -96,6 +108,7 @@ type Props = {
   marginLeft?: string;
   marginRight?: string;
   marginBottom?: string;
+  siteLink?: string;
 };
 
 const imgVariants = {
@@ -107,7 +120,7 @@ const imgVariants = {
   },
 
   large: {
-    height: "400px",
+    height: "450px",
     transition: {
       type: "tween",
     },
@@ -122,6 +135,7 @@ export const ProjectCards = ({
   marginRight,
   marginLeft,
   marginBottom,
+  siteLink,
 }: Props) => {
   const [largeImg, setLargeImg] = React.useState<boolean>(false);
   const [textDiv, setTextDiv] = React.useState("block");
@@ -181,6 +195,7 @@ export const ProjectCards = ({
           }}
         >
           <h2>{desTitle}</h2>
+          {siteLink && <a href={siteLink}>Check Out the Site!</a>}
           <p style={{ textAlign: "justify" }}>{description}</p>
         </div>
       </PicDesLayout>

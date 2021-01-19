@@ -169,6 +169,15 @@ export const Header = ({ init }: Props) => {
     }
   }, [bigScreen]);
 
+  let animationChange;
+  if (!bigScreen && !mobileScreen) {
+    animationChange = "big";
+  } else if ((bigScreen || mobileScreen) && !drawerOpen) {
+    animationChange = "closed";
+  } else {
+    animationChange = "open";
+  }
+
   return (
     <div>
       <Nav>
@@ -200,16 +209,7 @@ export const Header = ({ init }: Props) => {
             drawerOpen ? setDrawerOpen(false) : setDrawerOpen(true)
           }
         />
-        <LinkList
-          variants={drawerVariants}
-          animate={
-            !bigScreen && !mobileScreen
-              ? "big"
-              : (bigScreen || mobileScreen) && !drawerOpen
-              ? "closed"
-              : "open"
-          }
-        >
+        <LinkList variants={drawerVariants} animate={animationChange}>
           <li>
             <Link onClick={() => closeDrawer()} to="/about">
               About
