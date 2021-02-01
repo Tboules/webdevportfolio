@@ -16,6 +16,7 @@ const Nav = styled("nav")`
   padding-right: 10%;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
 
   @media only screen and (max-width: 800px) {
     padding-right: 5%;
@@ -24,8 +25,6 @@ const Nav = styled("nav")`
 `;
 
 const LogoWrap = styled("div")`
-  flex: 1;
-
   a {
     height: 100%;
     display: flex;
