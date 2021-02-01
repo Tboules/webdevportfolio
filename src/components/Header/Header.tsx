@@ -128,7 +128,7 @@ const LinkList = styled(motion.ul)`
 
 const drawerVariants = {
   big: {
-    clipPath: "circle(100% at calc(100% - 80px) 60px)",
+    clipPath: "circle(150% at calc(100% - 80px) 60px)",
   },
   closed: {
     clipPath: "circle(30px at calc(100% - 80px) 60px)",
