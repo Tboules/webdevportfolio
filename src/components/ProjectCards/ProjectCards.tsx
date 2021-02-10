@@ -109,6 +109,7 @@ type Props = {
   marginRight?: string;
   marginBottom?: string;
   siteLink?: string;
+  codeLink?: string;
 };
 
 const imgVariants = {
@@ -136,6 +137,7 @@ export const ProjectCards = ({
   marginLeft,
   marginBottom,
   siteLink,
+  codeLink,
 }: Props) => {
   const [largeImg, setLargeImg] = React.useState<boolean>(false);
   const [textDiv, setTextDiv] = React.useState("block");
@@ -196,6 +198,7 @@ export const ProjectCards = ({
         >
           <h2>{desTitle}</h2>
           {siteLink && <a href={siteLink}>Check Out the Site!</a>}
+          {codeLink && <a href={codeLink}>Check Out the Code</a>}
           <p style={{ textAlign: "justify" }}>{description}</p>
         </div>
       </PicDesLayout>

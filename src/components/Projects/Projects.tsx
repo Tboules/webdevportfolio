@@ -3,6 +3,7 @@ import { Banner } from "../Banner/Banner";
 import { Section } from "../Home/Home";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { ProjectCards } from "../ProjectCards/ProjectCards";
 
 //logos
 import reactLogo from "../../images/logos/React-icon.svg";
@@ -23,6 +24,9 @@ import socketIO from "../../images/logos/Socket-io-01.svg";
 import chakra from "../../images/logos/chakra-ui.svg";
 import reduxLogo from "../../images/logos/redux-seeklogo.com.svg";
 import tailwind from "../../images/logos/tailwindcss-icon.svg";
+import androidStudio from "../../images/logos/Android_Studio_icon.svg";
+import html5 from "../../images/logos/HTML5_logo_and_wordmark.svg";
+import javascriptLogo from "../../images/logos/Unofficial_JavaScript_logo_2.svg";
 
 //images
 import connect4 from "../../images/Connect_4.png";
@@ -33,7 +37,8 @@ import Face from "../../images/Facial Recognition.PNG";
 import Hour from "../../images/Hour Track.PNG";
 import Quiz from "../../images/TypeQuiz.PNG";
 import Poke from "../../images/Pokecomp.PNG";
-import { ProjectCards } from "../ProjectCards/ProjectCards";
+import pixelPerfectEZBank from "../../images/EasyBank_FrontEnd_Mentor.PNG";
+import offerUpClone from "../../images/OfferUp App/Mock Up Screen.png";
 
 const ProjectWrap = styled("div")`
   display: flex;
@@ -75,6 +80,39 @@ export const Projects = () => {
         </h4>
       </Banner>
       <ProjectWrap>
+        <Section>
+          <ProjectCards
+            marginBottom="60px"
+            marginLeft="60px"
+            imageLink={offerUpClone}
+            desTitle="Offer Up Clone"
+            logos={[
+              { link: reactLogo, toolTip: "React Native" },
+              { link: css, toolTip: "CSS" },
+              { link: nodeLogo, toolTip: "Node.js" },
+              { link: express, toolTip: "Express.js" },
+              { link: androidStudio, toolTip: "Android Studio" },
+            ]}
+            codeLink={"https://github.com/Tboules/offer_up_clone"}
+            description="The Offer Up Clone is a fully functional React Native application that allows you to post items that are for sale, contact sellers, view location information, and keep track of your sales. The idea came from another coder named Mosh Hamedani."
+          />
+        </Section>
+        <Section>
+          <ProjectCards
+            marginBottom="60px"
+            marginRight="60px"
+            imageLink={pixelPerfectEZBank}
+            desTitle="Front End Mentor Easy Bank"
+            logos={[
+              { link: html5, toolTip: "HTML5" },
+              { link: SassLogo, toolTip: "SCSS" },
+              { link: javascriptLogo, toolTip: "Javascript" },
+              { link: github, toolTip: "GitHub" },
+            ]}
+            codeLink={"https://github.com/Tboules/EasyBank_Frontend_Mentor"}
+            description="The Easy Bank project on Front End Mentor was a perfect opportunity to practice pixel perfect front end execution. Front End Mentor provided the design files and I used those to build the project using HTML, JS, and SASS."
+          />
+        </Section>
         <Section>
           <ProjectCards
             marginBottom="60px"
