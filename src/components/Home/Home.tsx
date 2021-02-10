@@ -72,6 +72,7 @@ export const Home = () => {
             marginRight={"80px"}
             imageLink={GracePhoto}
             desTitle={"Grace Social and Medical Services"}
+            siteLink={"https://elevatedbygrace.org/"}
             description="Grace is a non-profit helping new immigrants to Southern California. I organized and uploaded all of their content into the Contentful CMS and built out their site using Gatsby, React, GraphQL, and SASS. The site is not only easily customizable through Contentful, but also responsive, working well in the browser and on the phone. "
             logos={[
               { link: reactLogo, toolTip: "ReactJS" },
