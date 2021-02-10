@@ -189,16 +189,16 @@ export const Header = ({ init }: Props) => {
                   x: [width, width - 150, width + 350, 0],
                   scale: [1.5, 1],
                   transition: {
-                    delay: 3,
+                    delay: 2,
                     ease: "easeInOut",
                     duration: 1,
                   },
                 }}
                 src={TN}
-                alt=""
+                alt="Profile "
               />
             ) : (
-              <img src={TN} alt="" />
+              <img src={TN} alt="Profile " />
             )}
             <AnimatedTitle mediaQ="column" title="Anthony Boules" />
           </Link>
